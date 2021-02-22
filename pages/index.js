@@ -1,209 +1,80 @@
+import React, { useState } from 'react';
 import Head from 'next/head'
+import Link from 'next/link'
+import styled from 'styled-components'
+import { createGlobalStyle, ThemeProvider } from 'styled-components'
+
+
 
 export default function Home() {
+
+
+  const [clickOn , setClickOn]=useState(false)
+
+
+
+  const GlobalStyle = createGlobalStyle`
+  body {
+background-color:#e0dede;
+padding:2em;
+  }
+`
+
+const Title = styled.h2`
+padding:10px;
+text-align:center;
+
+
+`;
+
+  const Wrapper = styled.div`
+
+  display:flex;
+  justify-content:space-between;
+  flex-direction:row;
+  
+`;
+
+  const Divider=styled.div`
+
+
+  // height: 40%;
+  width: 20%;
+  text-align:center;
+  background: #f5f5f5;
+  padding: 2em;
+  border-radius: 10%;
+  font-weight:bold;
+  border: solid 6px #f5f5f5;
+  `
+
+  const Description=styled.p`
+  text-align: justify;
+  background: #f5f5f5;
+  padding: 2em;
+  border-radius: 10%;
+
+  border: solid 6px #e0dede;
+direction: rtl;
+  `
+
+
   return (
-    <div className="container">
-      <Head>
-        <title>Create Next App</title>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
+    <div>
+      <GlobalStyle/>
+      <Title>شهرک صیاد شیرازی</Title>
+    <Wrapper>
+    
+<Link href="/posts/first-post"><Divider><svg height="50" viewBox="0 0 64 64" width="50" xmlns="http://www.w3.org/2000/svg"><g id="healthcare-covid19-coronavirus-hand-hearth"><path d="m15.71 30.27-4.53-13.05a3.125 3.125 0 0 0 -3.56-2.32 3.007 3.007 0 0 0 -2.28 3.71l4.66 14.39z" fill="#ffac96"/><path d="m48.29 30.27 4.53-13.05a3.125 3.125 0 0 1 3.56-2.32 3.007 3.007 0 0 1 2.28 3.71l-4.66 14.39z" fill="#ffac96"/><path d="m25.046 35.682-8.84-5.182a2.994 2.994 0 0 0 -3.8.679l-3.226-9.959a3.125 3.125 0 0 0 -3.56-2.32 3.007 3.007 0 0 0 -2.28 3.71l4.35 16.23a3.948 3.948 0 0 0 1.21 1.96l6.76 6.01a4 4 0 0 1 1.34 2.99v3.2h12v-10.416a8 8 0 0 0 -3.954-6.902z" fill="#ffbcab"/><path d="m58.38 18.9a3.125 3.125 0 0 0 -3.56 2.32l-3.23 9.959a2.994 2.994 0 0 0 -3.8-.679l-8.84 5.182a8 8 0 0 0 -3.95 6.902v10.416h12v-3.2a4 4 0 0 1 1.34-2.99l6.76-6.01a3.948 3.948 0 0 0 1.21-1.96l4.35-16.23a3.007 3.007 0 0 0 -2.28-3.71z" fill="#ffbcab"/><path d="m34 53v8h14v-8h-1-12z" fill="#006df0"/><path d="m30 53h-1-12-1v8h14z" fill="#006df0"/><path d="m45.44 18.56-.71.71-12.73 12.73-12.73-12.73-.71-.71a9 9 0 1 1 12.73-12.72l.71.71.71-.71a9 9 0 1 1 12.73 12.72z" fill="#d80027"/><path d="m45.44 5.84a8.9 8.9 0 0 0 -7.368-2.579 8.994 8.994 0 0 1 5.368 15.3l-.71.71-11.73 11.729 1 1 12.73-12.73.71-.71a9 9 0 0 0 0-12.72z" fill="#bd0022"/><path d="m34 22v-4h4v-4h-4v-4h-4v4h-4v4h4v4z" fill="#f1f2f2"/><g fill="#ffac96"><path d="m50.794 33.7-6.684 3.7a.867.867 0 0 0 -.341 1.138.865.865 0 0 0 1.207.362l5.818-3.2a3 3 0 0 0 1.319-3.609 2.971 2.971 0 0 1 -1.319 1.609z"/><path d="m13.206 33.7 6.684 3.7a.867.867 0 0 1 .341 1.138.865.865 0 0 1 -1.207.362l-5.818-3.2a3 3 0 0 1 -1.319-3.609 2.971 2.971 0 0 0 1.319 1.609z"/></g></g></svg></Divider></Link>
 
-      <main>
-        <h1 className="title">
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
-        </h1>
+<Divider> <svg id="Capa_1" enable-background="new 0 0 512.008 512.008" height="50" viewBox="0 0 512.008 512.008" width="50" xmlns="http://www.w3.org/2000/svg"><g><path d="m451.93 193.511c-.762-7.661-7.222-13.506-14.927-13.506h-61-90c-4.233 0-8.276 1.787-11.118 4.937-2.842 3.135-4.233 7.339-3.809 11.558l8.994 90 95.933-1.593 84.921-1.395z" fill="#76e2f8"/><path d="m451.93 193.511c-.762-7.661-7.222-13.506-14.927-13.506h-61v104.901l84.921-1.395z" fill="#73bcff"/><path d="m497.003 270.005h-121-150.996l59.319 137h91.677 119.667l16.172-119.773c1.346-9.029-5.645-17.227-14.839-17.227z" fill="#f0f7ff"/><path d="m511.842 287.232c1.346-9.029-5.645-17.227-14.839-17.227h-121v137h119.667z" fill="#dfe7f4"/><path d="m411.573 468.499c-2.546-25.49 16.51-46.494 41.924-46.494 24.434 0 45.498 19.116 47.93 43.506 1.23 12.319-2.505 23.979-10.518 32.827-25.468 28.132-75.342 10.215-79.336-29.839z" fill="#58072a"/><path d="m268.073 468.499c-2.546-25.49 16.51-46.494 41.924-46.494 24.434 0 45.498 19.116 47.93 43.506 1.23 12.319-2.505 23.979-10.518 32.827-25.468 28.132-75.342 10.215-79.336-29.839z" fill="#6d1d40"/><path d="m309.997 452.005c-7.78 0-12.842 5.875-12.07 13.506 1.26 12.627 19.673 21.035 27.231 12.7 2.256-2.49 3.296-5.947 2.915-9.712-.893-8.935-9.17-16.494-18.076-16.494z" fill="#f0f7ff"/><path d="m200.397 194.244-63.647-63.633c-5.86-5.86-5.856-15.355 0-21.211l63.647-63.647c5.862-5.862 15.355-5.856 21.211 0l63.633 63.647c5.859 5.859 5.859 15.352 0 21.211l-63.633 63.633c-5.859 5.859-15.351 5.859-21.211 0z" fill="#9cdd05"/><path d="m346.003 150.005c-24.814 0-45-20.186-45-45s20.186-45 45-45 45 20.186 45 45-20.186 45-45 45z" fill="#ec577d"/><path d="m1.629 72.837c-6.602-23.955 7.457-48.735 31.465-55.313l57.846-15.893c23.848-6.621 49.75 7.544 56.313 31.465 6.592 23.906-7.529 48.721-31.45 55.298 0 0 0 0-.015 0l-58.861 15.908c-23.84 6.622-48.708-7.411-55.298-31.465z" fill="#fabe2c"/><path d="m136.003 362.005h-121c-8.291 0-15-6.709-15-15s6.709-15 15-15h121c8.291 0 15 6.709 15 15s-6.709 15-15 15z" fill="#f0f7ff"/><path d="m196.003 422.005h-121c-8.291 0-15-6.709-15-15s6.709-15 15-15h121c8.291 0 15 6.709 15 15s-6.709 15-15 15z" fill="#f0f7ff"/><path d="m453.497 452.005c-7.78 0-12.842 5.875-12.07 13.506 1.26 12.627 19.644 21.035 27.231 12.7 2.256-2.49 3.296-5.947 2.915-9.712-.893-8.935-9.17-16.494-18.076-16.494z" fill="#dfe7f4"/><path d="m480.509 392.005h-104.506-89.15l-74.077-172.962c-2.388-5.493-7.793-9.038-13.77-9.038h-60c-8.291 0-15 6.709-15 15s6.709 15 15 15h50.156l74.077 172.962c2.388 5.493 7.793 9.038 13.77 9.038h98.994 104.506c8.291 0 15-6.709 15-15s-6.709-15-15-15z" fill="#dfe7f4"/><path d="m495.509 407.005c0-8.291-6.709-15-15-15h-104.506v30h104.506c8.291 0 15-6.709 15-15z" fill="#c5d3dd"/></g></svg></Divider>
 
-        <p className="description">
-          Get started by editing <code>pages/index.js</code>
-        </p>
-
-        <div className="grid">
-          <a href="https://nextjs.org/docs" className="card">
-            <h3>Documentation &rarr;</h3>
-            <p>Find in-depth information about Next.js features and API.</p>
-          </a>
-
-          <a href="https://nextjs.org/learn" className="card">
-            <h3>Learn &rarr;</h3>
-            <p>Learn about Next.js in an interactive course with quizzes!</p>
-          </a>
-
-          <a
-            href="https://github.com/vercel/next.js/tree/master/examples"
-            className="card"
-          >
-            <h3>Examples &rarr;</h3>
-            <p>Discover and deploy boilerplate example Next.js projects.</p>
-          </a>
-
-          <a
-            href="https://vercel.com/import?filter=next.js&utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className="card"
-          >
-            <h3>Deploy &rarr;</h3>
-            <p>
-              Instantly deploy your Next.js site to a public URL with Vercel.
-            </p>
-          </a>
-        </div>
-      </main>
-
-      <footer>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{' '}
-          <img src="/vercel.svg" alt="Vercel Logo" className="logo" />
-        </a>
-      </footer>
-
-      <style jsx>{`
-        .container {
-          min-height: 100vh;
-          padding: 0 0.5rem;
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-          align-items: center;
-        }
-
-        main {
-          padding: 5rem 0;
-          flex: 1;
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-          align-items: center;
-        }
-
-        footer {
-          width: 100%;
-          height: 100px;
-          border-top: 1px solid #eaeaea;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-        }
-
-        footer img {
-          margin-left: 0.5rem;
-        }
-
-        footer a {
-          display: flex;
-          justify-content: center;
-          align-items: center;
-        }
-
-        a {
-          color: inherit;
-          text-decoration: none;
-        }
-
-        .title a {
-          color: #0070f3;
-          text-decoration: none;
-        }
-
-        .title a:hover,
-        .title a:focus,
-        .title a:active {
-          text-decoration: underline;
-        }
-
-        .title {
-          margin: 0;
-          line-height: 1.15;
-          font-size: 4rem;
-        }
-
-        .title,
-        .description {
-          text-align: center;
-        }
-
-        .description {
-          line-height: 1.5;
-          font-size: 1.5rem;
-        }
-
-        code {
-          background: #fafafa;
-          border-radius: 5px;
-          padding: 0.75rem;
-          font-size: 1.1rem;
-          font-family: Menlo, Monaco, Lucida Console, Liberation Mono,
-            DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace;
-        }
-
-        .grid {
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          flex-wrap: wrap;
-
-          max-width: 800px;
-          margin-top: 3rem;
-        }
-
-        .card {
-          margin: 1rem;
-          flex-basis: 45%;
-          padding: 1.5rem;
-          text-align: left;
-          color: inherit;
-          text-decoration: none;
-          border: 1px solid #eaeaea;
-          border-radius: 10px;
-          transition: color 0.15s ease, border-color 0.15s ease;
-        }
-
-        .card:hover,
-        .card:focus,
-        .card:active {
-          color: #0070f3;
-          border-color: #0070f3;
-        }
-
-        .card h3 {
-          margin: 0 0 1rem 0;
-          font-size: 1.5rem;
-        }
-
-        .card p {
-          margin: 0;
-          font-size: 1.25rem;
-          line-height: 1.5;
-        }
-
-        .logo {
-          height: 1em;
-        }
-
-        @media (max-width: 600px) {
-          .grid {
-            width: 100%;
-            flex-direction: column;
-          }
-        }
-      `}</style>
-
-      <style jsx global>{`
-        html,
-        body {
-          padding: 0;
-          margin: 0;
-          font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
-            Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue,
-            sans-serif;
-        }
-
-        * {
-          box-sizing: border-box;
-        }
-      `}</style>
-    </div>
+      
+ 
+  </Wrapper>
+  <Description>
+   به منظور رفاه حال ساکنان و ایجاد ارتباط سازنده بین سکنین، شهرک صیاد شیرازی اپلیکیشن "صیاد" را راه اندازی کرده تا ساکنین بتوانند با به اشتراک گذاشتن خدمات و کالاهای فروشی حود مشتریانشان را از شهرک پیدا گرده و این کار برای رفاه حال ساکنان بنا شده است.
+</Description>
+  </div>
   )
 }
